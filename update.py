@@ -34,7 +34,7 @@ UK_DICT_XML = "full-uk.xml"
 
 
 def _download_bz2(url, out_name):
-    subprocess.check_call("curl --progress-bar '%s' | bunzip2 > '%s'" % (url, out_name), shell=True)
+    subprocess.check_call("curl --progress-bar -L '%s' | bunzip2 > '%s'" % (url, out_name), shell=True)
 
 
 class RussianBuilder(object):
